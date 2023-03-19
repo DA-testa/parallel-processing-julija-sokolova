@@ -23,13 +23,14 @@ def main():
 
     # second line - data 
     # data - contains m integers t(i) - the times in seconds it takes any thread to process i-th job
-    data = []
+    data = list(map(int, input().split()))
 
     # TODO: create the function
     result = parallel_processing(n,m,data)
     
     # TODO: print out the results, each pair in it's own line
-
+    for pav1, lai in result:
+        print(pav1, lai)
 
 
 if __name__ == "__main__":
