@@ -6,8 +6,8 @@ def parallel_processing(n, m, data):
     # create the output pairs
     pav=[(i, 0) for i in range(n)]
     for i in range(m):
-        pav1=min(pav, key=lambda x: x[1])
-        lai=min(pav, key=lambda x: x[1])
+        pav1,lai=min(pav, key=lambda x: x[1])
+        
         output.append((pav1, lai))
         pav[pav1]=(pav1, lai + data[i])
     return output
